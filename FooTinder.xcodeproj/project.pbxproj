@@ -17,7 +17,16 @@
 		F8F1D4011E7AC5F800D9DC63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F1D3FF1E7AC5F800D9DC63 /* LaunchScreen.storyboard */; };
 		F8F1D40C1E7AC5F800D9DC63 /* FooTinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D40B1E7AC5F800D9DC63 /* FooTinderTests.swift */; };
 		F8F1D4171E7AC5F800D9DC63 /* FooTinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D4161E7AC5F800D9DC63 /* FooTinderUITests.swift */; };
-		F8F1D4251E7AC7F800D9DC63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8F1D4241E7AC7F800D9DC63 /* GoogleService-Info.plist */; };
+		F8F1D42A1E7AD84000D9DC63 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D4281E7AD84000D9DC63 /* MealTableViewCell.swift */; };
+		F8F1D42B1E7AD84000D9DC63 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D4291E7AD84000D9DC63 /* TableViewController.swift */; };
+		F8F1D42D1E7AD86A00D9DC63 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D42C1E7AD86A00D9DC63 /* Test.swift */; };
+		F8F1D4341E7AD87900D9DC63 /* LastUpdateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D42E1E7AD87900D9DC63 /* LastUpdateTable.swift */; };
+		F8F1D4351E7AD87900D9DC63 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D42F1E7AD87900D9DC63 /* Meal.swift */; };
+		F8F1D4361E7AD87900D9DC63 /* MealToSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D4301E7AD87900D9DC63 /* MealToSql.swift */; };
+		F8F1D4371E7AD87900D9DC63 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D4311E7AD87900D9DC63 /* Model.swift */; };
+		F8F1D4381E7AD87900D9DC63 /* ModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D4321E7AD87900D9DC63 /* ModelFirebase.swift */; };
+		F8F1D4391E7AD87900D9DC63 /* ModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D4331E7AD87900D9DC63 /* ModelSql.swift */; };
+		F8F1D43B1E7ADC8D00D9DC63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8F1D43A1E7ADC8D00D9DC63 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +69,17 @@
 		F8F1D4121E7AC5F800D9DC63 /* FooTinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FooTinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F1D4161E7AC5F800D9DC63 /* FooTinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooTinderUITests.swift; sourceTree = "<group>"; };
 		F8F1D4181E7AC5F800D9DC63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8F1D4241E7AC7F800D9DC63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F8F1D4271E7AD84000D9DC63 /* FooTinder-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FooTinder-Bridging-Header.h"; sourceTree = "<group>"; };
+		F8F1D4281E7AD84000D9DC63 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		F8F1D4291E7AD84000D9DC63 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F8F1D42C1E7AD86A00D9DC63 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		F8F1D42E1E7AD87900D9DC63 /* LastUpdateTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastUpdateTable.swift; sourceTree = "<group>"; };
+		F8F1D42F1E7AD87900D9DC63 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		F8F1D4301E7AD87900D9DC63 /* MealToSql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealToSql.swift; sourceTree = "<group>"; };
+		F8F1D4311E7AD87900D9DC63 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F8F1D4321E7AD87900D9DC63 /* ModelFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelFirebase.swift; sourceTree = "<group>"; };
+		F8F1D4331E7AD87900D9DC63 /* ModelSql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSql.swift; sourceTree = "<group>"; };
+		F8F1D43A1E7ADC8D00D9DC63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +145,14 @@
 		F8F1D3F51E7AC5F800D9DC63 /* FooTinder */ = {
 			isa = PBXGroup;
 			children = (
+				F8F1D4261E7AD78C00D9DC63 /* Models */,
 				F8F1D3F61E7AC5F800D9DC63 /* AppDelegate.swift */,
+				F8F1D4271E7AD84000D9DC63 /* FooTinder-Bridging-Header.h */,
+				F8F1D4281E7AD84000D9DC63 /* MealTableViewCell.swift */,
+				F8F1D4291E7AD84000D9DC63 /* TableViewController.swift */,
 				F8F1D3F81E7AC5F800D9DC63 /* ViewController.swift */,
 				F8F1D3FA1E7AC5F800D9DC63 /* Main.storyboard */,
-				F8F1D4241E7AC7F800D9DC63 /* GoogleService-Info.plist */,
+				F8F1D43A1E7ADC8D00D9DC63 /* GoogleService-Info.plist */,
 				F8F1D3FD1E7AC5F800D9DC63 /* Assets.xcassets */,
 				F8F1D3FF1E7AC5F800D9DC63 /* LaunchScreen.storyboard */,
 				F8F1D4021E7AC5F800D9DC63 /* Info.plist */,
@@ -153,6 +176,20 @@
 				F8F1D4181E7AC5F800D9DC63 /* Info.plist */,
 			);
 			path = FooTinderUITests;
+			sourceTree = "<group>";
+		};
+		F8F1D4261E7AD78C00D9DC63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F8F1D42E1E7AD87900D9DC63 /* LastUpdateTable.swift */,
+				F8F1D42F1E7AD87900D9DC63 /* Meal.swift */,
+				F8F1D4301E7AD87900D9DC63 /* MealToSql.swift */,
+				F8F1D4311E7AD87900D9DC63 /* Model.swift */,
+				F8F1D4321E7AD87900D9DC63 /* ModelFirebase.swift */,
+				F8F1D4331E7AD87900D9DC63 /* ModelSql.swift */,
+				F8F1D42C1E7AD86A00D9DC63 /* Test.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		FF84222C64C7D51DFFD0ABD5 /* Pods */ = {
@@ -285,7 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8F1D4011E7AC5F800D9DC63 /* LaunchScreen.storyboard in Resources */,
-				F8F1D4251E7AC7F800D9DC63 /* GoogleService-Info.plist in Resources */,
+				F8F1D43B1E7ADC8D00D9DC63 /* GoogleService-Info.plist in Resources */,
 				F8F1D3FE1E7AC5F800D9DC63 /* Assets.xcassets in Resources */,
 				F8F1D3FC1E7AC5F800D9DC63 /* Main.storyboard in Resources */,
 			);
@@ -450,8 +487,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8F1D4371E7AD87900D9DC63 /* Model.swift in Sources */,
 				F8F1D3F91E7AC5F800D9DC63 /* ViewController.swift in Sources */,
+				F8F1D4341E7AD87900D9DC63 /* LastUpdateTable.swift in Sources */,
+				F8F1D4351E7AD87900D9DC63 /* Meal.swift in Sources */,
 				F8F1D3F71E7AC5F800D9DC63 /* AppDelegate.swift in Sources */,
+				F8F1D4361E7AD87900D9DC63 /* MealToSql.swift in Sources */,
+				F8F1D42D1E7AD86A00D9DC63 /* Test.swift in Sources */,
+				F8F1D42A1E7AD84000D9DC63 /* MealTableViewCell.swift in Sources */,
+				F8F1D4391E7AD87900D9DC63 /* ModelSql.swift in Sources */,
+				F8F1D4381E7AD87900D9DC63 /* ModelFirebase.swift in Sources */,
+				F8F1D42B1E7AD84000D9DC63 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +654,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = omertom.FooTinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FooTinder/FooTinder-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -621,6 +668,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = omertom.FooTinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FooTinder/FooTinder-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -702,6 +750,7 @@
 				F8F1D41D1E7AC5F800D9DC63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8F1D41E1E7AC5F800D9DC63 /* Build configuration list for PBXNativeTarget "FooTinderTests" */ = {
 			isa = XCConfigurationList;
@@ -710,6 +759,7 @@
 				F8F1D4201E7AC5F800D9DC63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8F1D4211E7AC5F800D9DC63 /* Build configuration list for PBXNativeTarget "FooTinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -718,6 +768,7 @@
 				F8F1D4231E7AC5F800D9DC63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
