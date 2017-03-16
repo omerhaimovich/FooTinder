@@ -63,7 +63,6 @@ class Model{
         // get all updated records from firebase
         modelFirebase?.getAllMealsAndObserve(lastUpdateDate, callback: { (meals) in
             //update the local db
-            print("got \(meals.count) new records from FB")
             var lastUpdate:Date?
             for meal in meals{
                 meal.addMealToLocalDb(database: self.modelSql?.database)

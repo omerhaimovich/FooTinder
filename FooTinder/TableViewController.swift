@@ -17,7 +17,6 @@ class TableViewController: UITableViewController {
         NotificationCenter.default.addObserver(self, selector:
             #selector(ViewController.mealListDidUpdate),
                                                name: NSNotification.Name(rawValue: notifyMealListUpdate),object: nil)
-        //Model.instance.getAllStudentsAndObserve()
         Model.instance.getAllMealsAndObserve()
     }
     
@@ -44,7 +43,6 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MealTableViewCell", for: indexPath) as! MealTableViewCell
         cell.name!.text = self.mealList[indexPath.row].name
-        cell.id!.text = self.mealList[indexPath.row].id
         cell.restaurant!.text = self.mealList[indexPath.row].restaurant
         cell.cost!.text = String(self.mealList[indexPath.row].cost) + "$"
         cell.likes!.text = String(self.mealList[indexPath.row].likes) + " likes"

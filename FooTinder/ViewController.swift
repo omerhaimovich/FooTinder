@@ -37,30 +37,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
     override func viewDidLoad() {
         super.viewDidLoad()
         self.spinner.isHidden = true
-
-        //let image = Model.instance.readImageFromFile(name: "image.jpg")
-        //self.userAvatar.image = image
-    
-//        NotificationCenter.default.addObserver(self, selector:
-//            #selector(ViewController.studentsListDidUpdate),
-//            name: NSNotification.Name(rawValue: notifyStudentListUpdate),object: nil)
-//        
-//        Model.instance.getAllStudentsAndObserve()
-        
-//        for i in 1...4{
-//            let st = Student(id: "\(i)",name: "Kuku6\(i)")
-//            st.imageUrl = "8888888"
-//            
-//            Model.instance.addStudent(st: st)
-//
-//        }
-//      
-//        Model.instance.getAllStudents { (students) in
-//            for stu in students {
-//                print("student: \(stu.name) \(stu.lastUpdate!.stringValue)")
-//            }
-//
-//        }
         
     }
     
