@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82098D454BB4A6E277E50E82 /* Pods_FooTinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC48BD4EC9339F346E159A5 /* Pods_FooTinderTests.framework */; };
+		9E547F7F23A74D067AE51AEA /* Pods_FooTinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5569DF088CC44E4A9BC4FEEE /* Pods_FooTinder.framework */; };
+		A18FAE1FA32629F4552DEAAC /* Pods_FooTinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ACBFB63E95D5578D086E86 /* Pods_FooTinderUITests.framework */; };
 		F8F1D3F71E7AC5F800D9DC63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D3F61E7AC5F800D9DC63 /* AppDelegate.swift */; };
 		F8F1D3F91E7AC5F800D9DC63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D3F81E7AC5F800D9DC63 /* ViewController.swift */; };
 		F8F1D3FC1E7AC5F800D9DC63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F1D3FA1E7AC5F800D9DC63 /* Main.storyboard */; };
@@ -14,6 +17,7 @@
 		F8F1D4011E7AC5F800D9DC63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F1D3FF1E7AC5F800D9DC63 /* LaunchScreen.storyboard */; };
 		F8F1D40C1E7AC5F800D9DC63 /* FooTinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D40B1E7AC5F800D9DC63 /* FooTinderTests.swift */; };
 		F8F1D4171E7AC5F800D9DC63 /* FooTinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D4161E7AC5F800D9DC63 /* FooTinderUITests.swift */; };
+		F8F1D4251E7AC7F800D9DC63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8F1D4241E7AC7F800D9DC63 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010F665B8B3B53CABB44255F /* Pods-FooTinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooTinderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FooTinderTests/Pods-FooTinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1482A20C225E371DEEBB6441 /* Pods-FooTinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooTinderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FooTinderUITests/Pods-FooTinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1AE52D3EB4E1A480DE95CCB4 /* Pods-FooTinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooTinderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FooTinderTests/Pods-FooTinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		4CC48BD4EC9339F346E159A5 /* Pods_FooTinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FooTinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5569DF088CC44E4A9BC4FEEE /* Pods_FooTinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FooTinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76ACBFB63E95D5578D086E86 /* Pods_FooTinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FooTinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0513634133F7EEA29037EBC /* Pods-FooTinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooTinderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FooTinderUITests/Pods-FooTinderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B7A391250B1D0CA4599486A2 /* Pods-FooTinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooTinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FooTinder/Pods-FooTinder.debug.xcconfig"; sourceTree = "<group>"; };
+		BE5254BEDCC2F042ED999CE1 /* Pods-FooTinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooTinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-FooTinder/Pods-FooTinder.release.xcconfig"; sourceTree = "<group>"; };
 		F8F1D3F31E7AC5F800D9DC63 /* FooTinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FooTinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F1D3F61E7AC5F800D9DC63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8F1D3F81E7AC5F800D9DC63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +60,7 @@
 		F8F1D4121E7AC5F800D9DC63 /* FooTinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FooTinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F1D4161E7AC5F800D9DC63 /* FooTinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooTinderUITests.swift; sourceTree = "<group>"; };
 		F8F1D4181E7AC5F800D9DC63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8F1D4241E7AC7F800D9DC63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E547F7F23A74D067AE51AEA /* Pods_FooTinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82098D454BB4A6E277E50E82 /* Pods_FooTinderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +84,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A18FAE1FA32629F4552DEAAC /* Pods_FooTinderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7FD25CFAF41BA8564A771EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5569DF088CC44E4A9BC4FEEE /* Pods_FooTinder.framework */,
+				4CC48BD4EC9339F346E159A5 /* Pods_FooTinderTests.framework */,
+				76ACBFB63E95D5578D086E86 /* Pods_FooTinderUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F8F1D3EA1E7AC5F700D9DC63 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +108,8 @@
 				F8F1D40A1E7AC5F800D9DC63 /* FooTinderTests */,
 				F8F1D4151E7AC5F800D9DC63 /* FooTinderUITests */,
 				F8F1D3F41E7AC5F800D9DC63 /* Products */,
+				FF84222C64C7D51DFFD0ABD5 /* Pods */,
+				B7FD25CFAF41BA8564A771EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +129,7 @@
 				F8F1D3F61E7AC5F800D9DC63 /* AppDelegate.swift */,
 				F8F1D3F81E7AC5F800D9DC63 /* ViewController.swift */,
 				F8F1D3FA1E7AC5F800D9DC63 /* Main.storyboard */,
+				F8F1D4241E7AC7F800D9DC63 /* GoogleService-Info.plist */,
 				F8F1D3FD1E7AC5F800D9DC63 /* Assets.xcassets */,
 				F8F1D3FF1E7AC5F800D9DC63 /* LaunchScreen.storyboard */,
 				F8F1D4021E7AC5F800D9DC63 /* Info.plist */,
@@ -125,6 +155,19 @@
 			path = FooTinderUITests;
 			sourceTree = "<group>";
 		};
+		FF84222C64C7D51DFFD0ABD5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7A391250B1D0CA4599486A2 /* Pods-FooTinder.debug.xcconfig */,
+				BE5254BEDCC2F042ED999CE1 /* Pods-FooTinder.release.xcconfig */,
+				010F665B8B3B53CABB44255F /* Pods-FooTinderTests.debug.xcconfig */,
+				1AE52D3EB4E1A480DE95CCB4 /* Pods-FooTinderTests.release.xcconfig */,
+				1482A20C225E371DEEBB6441 /* Pods-FooTinderUITests.debug.xcconfig */,
+				A0513634133F7EEA29037EBC /* Pods-FooTinderUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8F1D41B1E7AC5F800D9DC63 /* Build configuration list for PBXNativeTarget "FooTinder" */;
 			buildPhases = (
+				68C8C36B2B1E2D8EAFD7B770 /* [CP] Check Pods Manifest.lock */,
 				F8F1D3EF1E7AC5F800D9DC63 /* Sources */,
 				F8F1D3F01E7AC5F800D9DC63 /* Frameworks */,
 				F8F1D3F11E7AC5F800D9DC63 /* Resources */,
+				79223FD1C5C2B2BE2F38F4ED /* [CP] Embed Pods Frameworks */,
+				FAE2E4FA423443BD3403AE8E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8F1D41E1E7AC5F800D9DC63 /* Build configuration list for PBXNativeTarget "FooTinderTests" */;
 			buildPhases = (
+				D589DA4A13753ED636D7EFE6 /* [CP] Check Pods Manifest.lock */,
 				F8F1D4031E7AC5F800D9DC63 /* Sources */,
 				F8F1D4041E7AC5F800D9DC63 /* Frameworks */,
 				F8F1D4051E7AC5F800D9DC63 /* Resources */,
+				A99F3570952DBC6010DC8207 /* [CP] Embed Pods Frameworks */,
+				D0236FAE82FFAA8E544F39A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8F1D4211E7AC5F800D9DC63 /* Build configuration list for PBXNativeTarget "FooTinderUITests" */;
 			buildPhases = (
+				606E3AE97F41DC1AA3B8C988 /* [CP] Check Pods Manifest.lock */,
 				F8F1D40E1E7AC5F800D9DC63 /* Sources */,
 				F8F1D40F1E7AC5F800D9DC63 /* Frameworks */,
 				F8F1D4101E7AC5F800D9DC63 /* Resources */,
+				9FCBC7F9FCA7D0B8DB488B7C /* [CP] Embed Pods Frameworks */,
+				C5A1D99DEB96D3564BBF2B96 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8F1D4011E7AC5F800D9DC63 /* LaunchScreen.storyboard in Resources */,
+				F8F1D4251E7AC7F800D9DC63 /* GoogleService-Info.plist in Resources */,
 				F8F1D3FE1E7AC5F800D9DC63 /* Assets.xcassets in Resources */,
 				F8F1D3FC1E7AC5F800D9DC63 /* Main.storyboard in Resources */,
 			);
@@ -253,6 +306,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		606E3AE97F41DC1AA3B8C988 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		68C8C36B2B1E2D8EAFD7B770 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		79223FD1C5C2B2BE2F38F4ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FooTinder/Pods-FooTinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FCBC7F9FCA7D0B8DB488B7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FooTinderUITests/Pods-FooTinderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A99F3570952DBC6010DC8207 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FooTinderTests/Pods-FooTinderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5A1D99DEB96D3564BBF2B96 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FooTinderUITests/Pods-FooTinderUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0236FAE82FFAA8E544F39A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FooTinderTests/Pods-FooTinderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D589DA4A13753ED636D7EFE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FAE2E4FA423443BD3403AE8E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FooTinder/Pods-FooTinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F8F1D3EF1E7AC5F800D9DC63 /* Sources */ = {
@@ -410,6 +601,7 @@
 		};
 		F8F1D41C1E7AC5F800D9DC63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7A391250B1D0CA4599486A2 /* Pods-FooTinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FooTinder/Info.plist;
@@ -422,6 +614,7 @@
 		};
 		F8F1D41D1E7AC5F800D9DC63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE5254BEDCC2F042ED999CE1 /* Pods-FooTinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FooTinder/Info.plist;
@@ -434,6 +627,7 @@
 		};
 		F8F1D41F1E7AC5F800D9DC63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 010F665B8B3B53CABB44255F /* Pods-FooTinderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -448,6 +642,7 @@
 		};
 		F8F1D4201E7AC5F800D9DC63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AE52D3EB4E1A480DE95CCB4 /* Pods-FooTinderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -462,6 +657,7 @@
 		};
 		F8F1D4221E7AC5F800D9DC63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1482A20C225E371DEEBB6441 /* Pods-FooTinderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FooTinderUITests/Info.plist;
@@ -475,6 +671,7 @@
 		};
 		F8F1D4231E7AC5F800D9DC63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0513634133F7EEA29037EBC /* Pods-FooTinderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FooTinderUITests/Info.plist;
