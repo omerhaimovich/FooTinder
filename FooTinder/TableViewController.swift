@@ -13,7 +13,7 @@ class TableViewController: UITableViewController, UIPopoverPresentationControlle
     
     @IBAction func showFilter(_ sender: UIBarButtonItem) {
         let VC = storyboard?.instantiateViewController(withIdentifier: "FilterPopOverController") as! FilterPopOverViewController
-        VC.preferredContentSize = CGSize(width: UIScreen.main.bounds.width, height:  500)
+        VC.preferredContentSize = CGSize(width: UIScreen.main.bounds.width, height:  300)
         let navagetion = UINavigationController(rootViewController: VC)
         navagetion.modalPresentationStyle = UIModalPresentationStyle.popover
         let popover = navagetion.popoverPresentationController
