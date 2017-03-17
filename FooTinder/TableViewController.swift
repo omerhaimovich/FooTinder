@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
     var mealList = [Meal]()
+    let searchController = UISearchController(searchResultsController: nil)
     
     @IBAction func showFilter(_ sender: UIBarButtonItem) {
         let VC = storyboard?.instantiateViewController(withIdentifier: "FilterPopOverController") as! FilterPopOverViewController
@@ -26,8 +27,16 @@ class TableViewController: UITableViewController, UIPopoverPresentationControlle
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
     }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        searchController.searchResultsUpdater = self
+//        searchController.dimsBackgroundDuringPresentation = false
+//        definesPresentationContext = true
+//        tableView.tableHeaderView = searchController.searchBar
         
         NotificationCenter.default.addObserver(self, selector:
             #selector(ViewController.mealListDidUpdate),
@@ -37,7 +46,26 @@ class TableViewController: UITableViewController, UIPopoverPresentationControlle
     
     @objc func mealListDidUpdate(notification:NSNotification){
         self.mealList = notification.userInfo?["MEALS"] as! [Meal]
+        filter()
+        self.sort()
         self.tableView!.reloadData()
+    }
+    
+    func filter(){
+        self.mealList = self.mealList.filter{
+            (Service.meal_name_filter.isEmpty || ($0.name.lowercased().contains(Service.meal_name_filter.lowercased()))) &&
+            (Service.restaurant_filter.isEmpty || ($0.restaurant.lowercased().contains(Service.restaurant_filter.lowercased()))) &&
+            (Service.type_filter.isEmpty || ($0.type.lowercased().contains(Service.type_filter.lowercased()))) &&
+            (Service.location_filter.isEmpty || ($0.location.lowercased().contains(Service.location_filter.lowercased())))
+        }
+        
+        self.sort()
+        self.tableView!.reloadData()
+    }
+    
+    func sort()
+    {
+        self.mealList = self.mealList.sorted(by: { $0.lastUpdate == nil || ($0.lastUpdate! > $1.lastUpdate!)});
     }
     
     override func didReceiveMemoryWarning() {

@@ -10,6 +10,25 @@ import UIKit
 
 class FilterPopOverViewController: UIViewController,  UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var restaurantName: UITextField!
+    
+    @IBOutlet weak var meal_name: UITextField!
+    
+    @IBAction func restore(_ sender: Any) {
+        Service.setFilters(location: "", meal_name: "", restaurant: "", type: "")
+        let table = storyboard?.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
+        table.filter()
+        self.dismiss(animated: false, completion: nil)
+        
+    }
+    @IBOutlet weak var restaurant_name: UITextField!
+    @IBAction func filter(_ sender: Any) {
+       Service.setFilters(location: locationText.text!, meal_name: mealName.text!, restaurant: restaurantName.text!, type: TypeText.text!)
+       let table = storyboard?.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
+        
+        table.filter()
+        self.dismiss(animated: false, completion: nil)
+    }
+    
     @IBOutlet weak var mealName: UITextField!
     
     @IBOutlet weak var TypeText: UITextField!
@@ -17,10 +36,12 @@ class FilterPopOverViewController: UIViewController,  UIPickerViewDataSource, UI
         switch (pickerView.tag)
         {
             case (1):
-                self.locationText.text = Service.getLocationWithNone()[row]
+                let value = Service.getLocationWithNone()[row]
+                self.locationText.text = (value == "None" ? "" : value)
                 break
             case (2):
-                TypeText.text = Service.getFoodTypesWithNone()[row]
+                let value = Service.getFoodTypesWithNone()[row]
+                TypeText.text = (value == "None" ? "" : value)
                 break
             default:
                 break;
@@ -63,6 +84,11 @@ class FilterPopOverViewController: UIViewController,  UIPickerViewDataSource, UI
     @IBOutlet weak var locationPicker: UIPickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationText.text = Service.location_filter
+        mealName.text = Service.meal_name_filter
+        TypeText.text = Service.type_filter
+        restaurantName.text = Service.restaurant_filter
         
         let locationPicker = UIPickerView()
         locationPicker.tag = 1

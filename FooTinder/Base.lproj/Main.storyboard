@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P1A-2i-pd5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P1A-2i-pd5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,7 +33,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -44,7 +44,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -218,7 +218,7 @@
         <!--FooTinder-->
         <scene sceneID="8P6-qZ-zag">
             <objects>
-                <tableViewController id="Jhx-on-8tw" customClass="TableViewController" customModule="FooTinder" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TableViewController" id="Jhx-on-8tw" customClass="TableViewController" customModule="FooTinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="438" sectionHeaderHeight="28" sectionFooterHeight="28" id="LpS-RP-MOD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -405,10 +405,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="161.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="Filter"/>
+                                                <connections>
+                                                    <action selector="filter:" destination="ew8-Bc-qUc" eventType="touchUpInside" id="M7G-ns-Ged"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFS-0E-lgs">
                                                 <rect key="frame" x="161.5" y="0.0" width="161.5" height="30"/>
                                                 <state key="normal" title="Clear"/>
+                                                <connections>
+                                                    <action selector="restore:" destination="ew8-Bc-qUc" eventType="touchUpInside" id="xyQ-CZ-Uvr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -435,7 +441,9 @@
                         <outlet property="TypeText" destination="D6g-wJ-4Ka" id="Qcr-2m-P1r"/>
                         <outlet property="locationText" destination="RAq-dS-4eO" id="cJ4-ZP-Hby"/>
                         <outlet property="mealName" destination="fcw-Sw-CPj" id="RSH-zJ-o0R"/>
+                        <outlet property="meal_name" destination="fcw-Sw-CPj" id="m33-jw-N8q"/>
                         <outlet property="restaurantName" destination="wXj-qf-nPk" id="6tN-or-bSM"/>
+                        <outlet property="restaurant_name" destination="wXj-qf-nPk" id="k30-Ee-w00"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gzi-Ax-SgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
