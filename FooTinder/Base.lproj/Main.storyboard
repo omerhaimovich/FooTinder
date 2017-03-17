@@ -390,7 +390,11 @@
                                 <state key="normal" title="Settings"/>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ryq-G7-s4f"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ryq-G7-s4f">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="w4r-qP-HIw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>

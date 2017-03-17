@@ -52,7 +52,8 @@ class ModelFirebase{
         if (lastUpdateDate != nil){
             print("q starting at:\(lastUpdateDate!) \(lastUpdateDate!.toFirebase())")
             let fbQuery = ref.queryOrdered(byChild:"lastUpdate").queryStarting(atValue:lastUpdateDate!.toFirebase())
-            fbQuery.observeSingleEvent(of: .value, with: handler)
+           fbQuery.observeSingleEvent(of: .value, with: handler);
+            
         }else{
             ref.observeSingleEvent(of: .value, with: handler)
         }
