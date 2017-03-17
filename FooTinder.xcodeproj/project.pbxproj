@@ -27,6 +27,7 @@
 		F8F1D4391E7AD87900D9DC63 /* ModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D4331E7AD87900D9DC63 /* ModelSql.swift */; };
 		F8F1D43B1E7ADC8D00D9DC63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8F1D43A1E7ADC8D00D9DC63 /* GoogleService-Info.plist */; };
 		F8F1D43D1E7B1A0500D9DC63 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = F8F1D43C1E7B1A0500D9DC63 /* Images */; };
+		F8F1D43F1E7C0AFC00D9DC63 /* LocationDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D43E1E7C0AFC00D9DC63 /* LocationDataSourceDelegate.swift */; };
 		FA6209691E7BE51A003B9F7C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6209681E7BE51A003B9F7C /* Service.swift */; };
 		FA62096B1E7BF70B003B9F7C /* FilterPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62096A1E7BF70B003B9F7C /* FilterPopOverViewController.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		F8F1D4331E7AD87900D9DC63 /* ModelSql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSql.swift; sourceTree = "<group>"; };
 		F8F1D43A1E7ADC8D00D9DC63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F8F1D43C1E7B1A0500D9DC63 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = SOURCE_ROOT; };
+		F8F1D43E1E7C0AFC00D9DC63 /* LocationDataSourceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDataSourceDelegate.swift; sourceTree = "<group>"; };
 		FA6209681E7BE51A003B9F7C /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		FA62096A1E7BF70B003B9F7C /* FilterPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterPopOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +196,7 @@
 				F8F1D4311E7AD87900D9DC63 /* Model.swift */,
 				F8F1D4321E7AD87900D9DC63 /* ModelFirebase.swift */,
 				F8F1D4331E7AD87900D9DC63 /* ModelSql.swift */,
+				F8F1D43E1E7C0AFC00D9DC63 /* LocationDataSourceDelegate.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				F8F1D4351E7AD87900D9DC63 /* Meal.swift in Sources */,
 				F8F1D3F71E7AC5F800D9DC63 /* AppDelegate.swift in Sources */,
 				F8F1D4361E7AD87900D9DC63 /* MealToSql.swift in Sources */,
+				F8F1D43F1E7C0AFC00D9DC63 /* LocationDataSourceDelegate.swift in Sources */,
 				F8F1D42A1E7AD84000D9DC63 /* MealTableViewCell.swift in Sources */,
 				F8F1D4391E7AD87900D9DC63 /* ModelSql.swift in Sources */,
 				FA6209691E7BE51A003B9F7C /* Service.swift in Sources */,
