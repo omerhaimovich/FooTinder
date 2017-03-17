@@ -8,9 +8,24 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
     var mealList = [Meal]()
     
+    @IBAction func showFilter(_ sender: UIBarButtonItem) {
+        let VC = storyboard?.instantiateViewController(withIdentifier: "FilterPopOverController") as! FilterPopOverViewController
+        VC.preferredContentSize = CGSize(width: UIScreen.main.bounds.width, height:  500)
+        let navagetion = UINavigationController(rootViewController: VC)
+        navagetion.modalPresentationStyle = UIModalPresentationStyle.popover
+        let popover = navagetion.popoverPresentationController
+        popover?.delegate = self
+        popover?.barButtonItem = sender
+        self.present(navagetion, animated: true, completion: nil)
+        
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
