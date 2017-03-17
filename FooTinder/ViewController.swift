@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     var imageUrl:String?
     @IBOutlet weak var userAvatar: UIImageView!
-    @IBOutlet weak var type: UITextField!
+    
     
     @IBAction func editImage(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
@@ -56,6 +56,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
     
     @IBOutlet weak var nameTf: UITextField!
     
+    @IBOutlet weak var type: UITextField!
     @IBOutlet weak var restaurant: UITextField!
     @IBOutlet weak var idTf: UITextField!
     @IBOutlet weak var cost: UITextField!
@@ -75,12 +76,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
             self.navigationController!.popViewController(animated: true)
         }
         }else{
-            //let st = Student(id: self.idTf!.text!, name: self.nameTf!.text!)
-            //Model.instance.addStudent(st: st)
-            let meal = Meal(id: self.idTf.text!, name: self.nameTf.text!, type: self.type.text!, location: self.location.text!, cost: Double(self.cost.text!)!, comments: [], likes: 1, restaurant: self.restaurant.text!)
-            Model.instance.addMeal(meal: meal)
-            self.spinner.stopAnimating()
-            self.navigationController!.popViewController(animated: true)
+            let alertController = UIAlertController(title: "Missing Image", message:
+                "Image must be selected!", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+            
+            self.present(alertController, animated: true, completion: nil)
         }
     }
 

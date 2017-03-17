@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P1A-2i-pd5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P1A-2i-pd5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -195,12 +195,12 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="cost" destination="HGn-DT-aeV" id="fZL-g1-UHa"/>
-                        <outlet property="idTf" destination="cYk-WF-y8P" id="ypq-uX-AQ9"/>
+                        <outlet property="idTf" destination="B85-i4-cmh" id="cV6-zU-Bt2"/>
                         <outlet property="location" destination="cYk-WF-y8P" id="eBW-Ov-ptU"/>
                         <outlet property="nameTf" destination="fsJ-Jd-caW" id="b78-N7-8DE"/>
                         <outlet property="restaurant" destination="Olq-if-kDC" id="Ny8-Ia-Ogc"/>
                         <outlet property="spinner" destination="baA-O4-gb4" id="shc-bv-8lB"/>
-                        <outlet property="type" destination="Olq-if-kDC" id="bBh-gm-wkQ"/>
+                        <outlet property="type" destination="i9V-hI-FDE" id="I5r-D9-pjo"/>
                         <outlet property="userAvatar" destination="35t-K8-C1U" id="MKd-J9-mgo"/>
                     </connections>
                 </viewController>
@@ -277,7 +277,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="438"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K0V-X0-0wB" id="oca-sg-e0J">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="437"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="437.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcM-bE-3hV">
@@ -389,6 +389,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings"/>
                             </button>
+                            <connections>
+                                <segue destination="ew8-Bc-qUc" kind="popoverPresentation" popoverAnchorBarButtonItem="cYQ-OD-buM" id="UVj-QX-ZIY">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ryq-G7-s4f">
                             <connections>
@@ -401,6 +406,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQ8-mG-zX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="652" y="747.9760119940031"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WQX-YY-UyA">
+            <objects>
+                <viewController id="ew8-Bc-qUc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wLf-gJ-haS"/>
+                        <viewControllerLayoutGuide type="bottom" id="UuV-4e-2sV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3S1-k7-zVc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gzi-Ax-SgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="1423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sEK-u1-mSZ">
