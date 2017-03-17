@@ -76,7 +76,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         case (1):
             return Service.getLocations().count;
         case (2):
-            return Service.geFoodTypes().count;
+            return Service.getFoodTypes().count;
         default:
             break;
         }
@@ -95,7 +95,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         case (1):
             return Service.getLocations()[row];
         case (2):
-            return Service.geFoodTypes()[row];
+            return Service.getFoodTypes()[row];
         default:
             break;
         }
@@ -110,7 +110,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
             self.locationTextField.text = Service.getLocations()[row]
             break
         case (2):
-            typeTextField.text = Service.geFoodTypes()[row]
+            typeTextField.text = Service.getFoodTypes()[row]
             break
         default:
             break;

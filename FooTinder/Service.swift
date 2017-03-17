@@ -9,6 +9,11 @@
 import Foundation
 
 class Service{
+    static var location_filter = ""
+    static var meal_name_filter = ""
+    static var restaurant_filter = ""
+    static var type_filter = ""
+    
     static func getLocations() -> [String]
     {
         return ["Tel Aviv",
@@ -21,7 +26,29 @@ class Service{
                 "Nazenet"].sorted(by: {$0 < $1});
     }
     
-    static func geFoodTypes() -> [String]
+    static func setFilters(location :String, meal_name :String, restaurant: String, type: String)
+    {
+        Service.location_filter = location
+        Service.meal_name_filter = meal_name
+        Service.restaurant_filter = restaurant
+        Service.type_filter = type
+    }
+    
+    static func getLocationWithNone() -> [String]
+    {
+        var locations = Service.getLocations()
+        locations.insert("None", at: 0)
+        return locations
+    }
+    
+    static func getFoodTypesWithNone() -> [String]
+    {
+        var types = Service.getFoodTypes()
+        types.insert("None", at: 0)
+        return types
+    }
+    
+    static func getFoodTypes() -> [String]
     {
         return ["Italian",
                 "Chinese",

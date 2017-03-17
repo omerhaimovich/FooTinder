@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P1A-2i-pd5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P1A-2i-pd5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -219,7 +219,7 @@
         <!--FooTinder-->
         <scene sceneID="8P6-qZ-zag">
             <objects>
-                <tableViewController id="Jhx-on-8tw" customClass="TableViewController" customModule="FooTinder" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TableViewController" id="Jhx-on-8tw" customClass="TableViewController" customModule="FooTinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="438" sectionHeaderHeight="28" sectionFooterHeight="28" id="LpS-RP-MOD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -372,47 +372,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pvn-tU-49Y">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pvn-tU-49Y">
+                                <rect key="frame" x="16" y="20" width="323" height="627"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Meal Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fcw-Sw-CPj">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="537"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Meal Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fcw-Sw-CPj">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="139.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Restaurant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wXj-qf-nPk">
-                                        <rect key="frame" x="0.0" y="537" width="343" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Restaurant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wXj-qf-nPk">
+                                        <rect key="frame" x="0.0" y="149.5" width="323" height="139"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAq-dS-4eO">
-                                        <rect key="frame" x="0.0" y="567" width="343" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAq-dS-4eO">
+                                        <rect key="frame" x="0.0" y="298.5" width="323" height="139.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D6g-wJ-4Ka">
-                                        <rect key="frame" x="0.0" y="597" width="343" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D6g-wJ-4Ka">
+                                        <rect key="frame" x="0.0" y="448" width="323" height="139"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLh-Xj-07Y">
+                                        <rect key="frame" x="0.0" y="597" width="323" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJL-6s-nvV">
+                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Filter"/>
+                                                <connections>
+                                                    <action selector="filter:" destination="ew8-Bc-qUc" eventType="touchUpInside" id="M7G-ns-Ged"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFS-0E-lgs">
+                                                <rect key="frame" x="161.5" y="0.0" width="161.5" height="30"/>
+                                                <state key="normal" title="Clear"/>
+                                                <connections>
+                                                    <action selector="restore:" destination="ew8-Bc-qUc" eventType="touchUpInside" id="xyQ-CZ-Uvr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="NFS-0E-lgs" firstAttribute="width" secondItem="eJL-6s-nvV" secondAttribute="width" id="16g-fM-65R"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="RAq-dS-4eO" firstAttribute="height" secondItem="fcw-Sw-CPj" secondAttribute="height" id="EDy-tR-Q27"/>
+                                    <constraint firstItem="D6g-wJ-4Ka" firstAttribute="height" secondItem="fcw-Sw-CPj" secondAttribute="height" id="Kso-9d-xIk"/>
+                                    <constraint firstItem="wXj-qf-nPk" firstAttribute="height" secondItem="fcw-Sw-CPj" secondAttribute="height" id="U56-zj-WXN"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Pvn-tU-49Y" firstAttribute="top" secondItem="wLf-gJ-haS" secondAttribute="bottom" id="9kX-ql-a5G"/>
-                            <constraint firstItem="UuV-4e-2sV" firstAttribute="top" secondItem="Pvn-tU-49Y" secondAttribute="bottom" constant="20" id="H46-Y3-f6J"/>
-                            <constraint firstItem="Pvn-tU-49Y" firstAttribute="trailing" secondItem="3S1-k7-zVc" secondAttribute="trailingMargin" id="mtH-td-MWB"/>
-                            <constraint firstItem="Pvn-tU-49Y" firstAttribute="leading" secondItem="3S1-k7-zVc" secondAttribute="leadingMargin" id="rIZ-mx-RnB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pvn-tU-49Y" secondAttribute="trailing" constant="10" id="RDZ-LT-byY"/>
+                            <constraint firstItem="UuV-4e-2sV" firstAttribute="top" secondItem="Pvn-tU-49Y" secondAttribute="bottom" constant="10" id="Ril-8K-DWH"/>
+                            <constraint firstItem="Pvn-tU-49Y" firstAttribute="top" secondItem="wLf-gJ-haS" secondAttribute="bottom" constant="10" id="cVA-yB-Mab"/>
+                            <constraint firstItem="Pvn-tU-49Y" firstAttribute="leading" secondItem="3S1-k7-zVc" secondAttribute="leadingMargin" constant="10" id="sRd-oi-OPG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="TypeText" destination="D6g-wJ-4Ka" id="Qcr-2m-P1r"/>
                         <outlet property="locationText" destination="RAq-dS-4eO" id="cJ4-ZP-Hby"/>
+                        <outlet property="mealName" destination="fcw-Sw-CPj" id="RSH-zJ-o0R"/>
+                        <outlet property="meal_name" destination="fcw-Sw-CPj" id="m33-jw-N8q"/>
+                        <outlet property="restaurantName" destination="wXj-qf-nPk" id="6tN-or-bSM"/>
+                        <outlet property="restaurant_name" destination="wXj-qf-nPk" id="k30-Ee-w00"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gzi-Ax-SgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
