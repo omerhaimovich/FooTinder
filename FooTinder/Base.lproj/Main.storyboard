@@ -377,16 +377,9 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="FooTinder" id="Y9q-ez-jaO">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" style="plain" id="cYQ-OD-buM">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f9j-ew-51x">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Settings"/>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="search" id="cYQ-OD-buM">
                             <connections>
-                                <segue destination="ew8-Bc-qUc" kind="popoverPresentation" popoverAnchorBarButtonItem="cYQ-OD-buM" id="UVj-QX-ZIY">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <action selector="showFilter:" destination="Jhx-on-8tw" id="Lee-46-Utc"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ryq-G7-s4f">
@@ -402,10 +395,10 @@
             </objects>
             <point key="canvasLocation" x="652" y="747.9760119940031"/>
         </scene>
-        <!--View Controller-->
+        <!--Filter-->
         <scene sceneID="WQX-YY-UyA">
             <objects>
-                <viewController id="ew8-Bc-qUc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FilterPopOverController" title="Filter" id="ew8-Bc-qUc" customClass="FilterPopOverViewController" customModule="FooTinder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wLf-gJ-haS"/>
                         <viewControllerLayoutGuide type="bottom" id="UuV-4e-2sV"/>
@@ -413,12 +406,18 @@
                     <view key="view" contentMode="scaleToFill" id="3S1-k7-zVc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EBY-kK-YHv">
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gzi-Ax-SgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="1423"/>
+            <point key="canvasLocation" x="652" y="1421.7391304347827"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sEK-u1-mSZ">
@@ -429,7 +428,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Jhx-on-8tw" kind="relationship" relationship="rootViewController" id="12c-Rv-q9K"/>
+                        <segue destination="Jhx-on-8tw" kind="relationship" relationship="rootViewController" id="v61-0v-9VO"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEx-JI-yND" userLabel="First Responder" sceneMemberID="firstResponder"/>

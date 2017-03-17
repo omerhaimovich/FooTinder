@@ -28,6 +28,7 @@
 		F8F1D43B1E7ADC8D00D9DC63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8F1D43A1E7ADC8D00D9DC63 /* GoogleService-Info.plist */; };
 		F8F1D43D1E7B1A0500D9DC63 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = F8F1D43C1E7B1A0500D9DC63 /* Images */; };
 		FA6209691E7BE51A003B9F7C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6209681E7BE51A003B9F7C /* Service.swift */; };
+		FA62096B1E7BF70B003B9F7C /* FilterPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62096A1E7BF70B003B9F7C /* FilterPopOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		F8F1D43A1E7ADC8D00D9DC63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F8F1D43C1E7B1A0500D9DC63 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = SOURCE_ROOT; };
 		FA6209681E7BE51A003B9F7C /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		FA62096A1E7BF70B003B9F7C /* FilterPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterPopOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				F8F1D3FD1E7AC5F800D9DC63 /* Assets.xcassets */,
 				F8F1D3FF1E7AC5F800D9DC63 /* LaunchScreen.storyboard */,
 				F8F1D4021E7AC5F800D9DC63 /* Info.plist */,
+				FA62096A1E7BF70B003B9F7C /* FilterPopOverViewController.swift */,
 			);
 			path = FooTinder;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA62096B1E7BF70B003B9F7C /* FilterPopOverViewController.swift in Sources */,
 				F8F1D4371E7AD87900D9DC63 /* Model.swift in Sources */,
 				F8F1D3F91E7AC5F800D9DC63 /* ViewController.swift in Sources */,
 				F8F1D4341E7AD87900D9DC63 /* LastUpdateTable.swift in Sources */,
