@@ -16,13 +16,12 @@ class Meal{
     var type:String
     var location:String
     var cost:Double
-    var comments:[String]?
-    var likes:Double = 0
+    var views:Double = 0
     var restaurant:String
-    
+    var rating:Int
     var lastUpdate:Date?
     
-    init(id:String, name:String, imageUrl:String? = nil, type:String, location:String, cost:Double, comments: [String] = [], likes:Double = 0, restaurant:String){
+    init(id:String, name:String, imageUrl:String? = nil, type:String, location:String, cost:Double,  views:Double = 0, restaurant:String, rating: Int){
         self.id = id
         self.name = name
         self.restaurant = restaurant
@@ -30,8 +29,8 @@ class Meal{
         self.type = type
         self.cost = cost
         self.location = location
-        self.comments = comments
-        self.likes = likes
+        self.views = views
+        self.rating = rating
     }
     
     init(json:Dictionary<String,Any>){
@@ -41,8 +40,8 @@ class Meal{
         self.restaurant = json["restaurant"] as! String
         self.cost = json["cost"] as! Double
         self.location = json["location"] as! String
-        self.comments = json["comments"] as? [String]
-        self.likes = json["likes"] as! Double
+        self.rating = json["rating"] as! Int
+        self.views = json["views"] as! Double
         if let im = json["imageUrl"] as? String{
             imageUrl = im
         }
@@ -59,8 +58,8 @@ class Meal{
         json["restaurant"] = restaurant
         json["cost"] = cost
         json["location"] = location
-        json["comments"] = comments
-        json["likes"] = likes
+        json["views"] = views
+        json["rating"] = rating
         if (imageUrl != nil){
             json["imageUrl"] = imageUrl!
         }

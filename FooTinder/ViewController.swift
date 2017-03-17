@@ -13,38 +13,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
 
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     var imageUrl:String?
-    @IBOutlet weak var userAvatar: UIImageView!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var nameTf: UITextField!
-    @IBOutlet weak var type: UITextField!
     @IBOutlet weak var restaurant: UITextField!
-    @IBOutlet weak var idTf: UITextField!
-    @IBOutlet weak var cost: UITextField!
-    @IBOutlet weak var location: UITextField!
-    var selectedImage:UIImage?
-
     @IBOutlet weak var typeTextField: UITextField!
+    @IBOutlet weak var CostTF: UITextField!
     
-    @IBAction func selectPhotoFromLibrary(_ sender: UITapGestureRecognizer) {
-        
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.camera;
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
-        }else{
-            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
-                let imagePicker = UIImagePickerController()
-                imagePicker.delegate = self
-                imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
-                imagePicker.allowsEditing = true
-                self.present(imagePicker, animated: true, completion: nil)
-            }
-        }
-        
-    
-    }
+    @IBOutlet weak var RatingControl: RatingControl!
+    @IBOutlet weak var userAvatar: UIImageView!
+    var selectedImage:UIImage?
     
     //MARK: UIImagePickerControllerDelegate
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -63,7 +40,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         let typepicker = UIPickerView()
         typepicker.tag = 2
         typepicker.delegate = self
-        typeTextField.inputView = typepicker
+        typeTextField.inputView = typepicker;
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target:self,action: "dismissKeyboard");
+        
+        view.addGestureRecognizer(tap);
+    }
+    
+    func dismissKeyboard()
+    {
+        view.endEditing(true);
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -126,35 +112,105 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
     }
     
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    
+    @IBAction func onTap(_ sender: UITapGestureRecognizer) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera;
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }else{
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
+                imagePicker.allowsEditing = true
+                self.present(imagePicker, animated: true, completion: nil)
+            }
+        }
+
+    }
     
     @IBAction func save(_ sender: UIButton) {
-        self.spinner.isHidden = false
-        self.spinner.startAnimating()
-        if let image = self.selectedImage{
-            Model.instance.saveImage(image: image, name:self.idTf!.text!){(url) in
-            self.imageUrl = url
-                            let meal = Meal(id: self.idTf.text!, name: self.nameTf.text!, imageUrl: self.imageUrl, type: self.type.text!, location: self.location.text!, cost: Double(self.cost.text!)!, comments: [], likes: 1, restaurant: self.restaurant.text!)
-            Model.instance.addMeal(meal: meal)
-            self.spinner.stopAnimating()
-            self.navigationController!.popViewController(animated: true)
+        self.spinner.isHidden = false;
+        self.spinner.startAnimating();
+        
+        if self.nameTf!.text != nil
+        {
+            if self.restaurant!.text != nil
+            {
+                if self.typeTextField!.text != nil
+                {
+                    if self.locationTextField!.text != nil
+                    {
+                        if self.CostTF!.text != nil
+                        {
+                            if let image = self.selectedImage{
+                                
+                                let id = self.nameTf!.text! + String(arc4random_uniform(10000000) + 1);
+                                
+                                //let id = self.nameTf!.text! + String(Date().toFirebase());
+                                
+                                
+                                Model.instance.saveImage(image: image, name:id){(url) in
+                                    self.imageUrl = url
+                                    let meal = Meal(id: id, name: self.nameTf.text!, imageUrl: self.imageUrl, type: self.typeTextField.text!, location: self.locationTextField.text!, cost: Double(self.CostTF.text!)!, views: 1, restaurant: self.restaurant.text!, rating: self.RatingControl.rating)
+                                    Model.instance.addMeal(meal: meal)
+                                    self.spinner.stopAnimating()
+                                    self.navigationController!.popViewController(animated: true)
+                                }
+                            }else{
+                                alert(message: "Image must be selected!",header: "Missing Image");
+                            }
+                            
+                            
+                            
+                        }
+                        else
+                        {
+                             alert(message: "Cost must be selected!",header: "Missing Cost");
+                        }
+                    }
+                    else
+                    {
+                         alert(message: "Location must be selected!",header: "Missing Location");
+                    }
+                }
+                else
+                {
+                     alert(message: "Type must be selected!",header: "Missing Type");
+                }
+            }
+            else
+            {
+                 alert(message: "Restaurant must be Filled!",header: "Missing Restaurant");
+            }
         }
-        }else{
-            let alertController = UIAlertController(title: "Missing Image", message:
-                "Image must be selected!", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-            
-            self.present(alertController, animated: true, completion: nil)
+        else
+        {
+             alert(message: "Name must be filled!",header: "Missing Name");
         }
+        
     }
 
     @IBAction func cancel(_ sender: UIButton) {
         self.navigationController!.popViewController(animated: true)
+    }
+    
+    func alert(message: String, header: String)
+    {
+        let alertController = UIAlertController(title: header, message:
+            message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
+
     }
     
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){

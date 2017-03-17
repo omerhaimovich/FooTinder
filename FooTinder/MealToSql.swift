@@ -16,8 +16,8 @@ extension Meal{
     static let ML_IMAGE_URL = "IMAGE_URL"
     static let ML_TYPE = "TYPE"
     static let ML_LOCATION = "LOCATION"
-    static let ML_LIKES = "LIKES"
-    static let ML_COMMENTS = "COMMENTS"
+    static let ML_VIEWS = "VIEWS"
+    static let ML_RATING = "RATING"
     static let ML_COST = "COST"
     static let ML_RESTAURANT = "RESTAURANT"
     
@@ -33,9 +33,9 @@ extension Meal{
             + ML_TYPE + " TEXT, "
             + ML_RESTAURANT + " TEXT, "
             + ML_LOCATION + " TEXT, "
-            + ML_LIKES + " DOUBLE, "
+            + ML_VIEWS + " DOUBLE, "
             + ML_COST + " DOUBLE, "
-            + ML_COMMENTS + " TEXT, "
+            + ML_RATING + " INT, "
             + ML_LAST_UPDATE + " DOUBLE)", nil, nil, &errormsg);
         if(res != 0){
             print("error creating table");
@@ -54,9 +54,9 @@ extension Meal{
             + Meal.ML_TYPE + ","
             + Meal.ML_RESTAURANT + ","
             + Meal.ML_LOCATION + ","
-            + Meal.ML_LIKES + ","
+            + Meal.ML_VIEWS + ","
             + Meal.ML_COST + ","
-            + Meal.ML_COMMENTS + ","
+            + Meal.ML_RATING + ","
             + Meal.ML_LAST_UPDATE + ") VALUES (?,?,?,?,?,?,?,?,?,?);",-1, &sqlite3_stmt,nil) == SQLITE_OK){
             
             let id = self.id.cString(using: .utf8)
@@ -64,8 +64,8 @@ extension Meal{
             let type = self.type.cString(using: .utf8)
             let restaurant = self.restaurant.cString(using: .utf8)
             let location = self.location.cString(using: .utf8)
-            let comments = self.comments?.joined(separator: ";").cString(using: .utf8)
-            let likes = self.likes
+            let rating = self.rating
+            let views = self.views
             let cost = self.cost
             var imageUrl = "".cString(using: .utf8)
             if self.imageUrl != nil {
@@ -78,9 +78,9 @@ extension Meal{
             sqlite3_bind_text(sqlite3_stmt, 4, type,-1,nil);
             sqlite3_bind_text(sqlite3_stmt, 5, restaurant,-1,nil);
             sqlite3_bind_text(sqlite3_stmt, 6, location,-1,nil);
-            sqlite3_bind_double(sqlite3_stmt, 7, likes);
+            sqlite3_bind_double(sqlite3_stmt, 7, views);
             sqlite3_bind_double(sqlite3_stmt, 8, cost);
-            sqlite3_bind_text(sqlite3_stmt, 9, comments,-1,nil);
+            sqlite3_bind_int(sqlite3_stmt, 9, Int32(rating));
             if (lastUpdate == nil){
                 lastUpdate = Date()
             }
@@ -104,15 +104,15 @@ extension Meal{
                 let type = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,3))
                 let restaurant = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,4))
                 let location = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,5))
-                let likes = Double(sqlite3_column_double(sqlite3_stmt,6))
+                let views = Double(sqlite3_column_double(sqlite3_stmt,6))
                 let cost = Double(sqlite3_column_double(sqlite3_stmt,7))
-                let comments = (String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,8)))?.components(separatedBy: ";")
+                let rating = Int(sqlite3_column_int(sqlite3_stmt,8))
                 //let update =  Double(sqlite3_column_double(sqlite3_stmt,3))
                 print("read from filter st: \(stId) \(name) \(imageUrl)")
                 if (imageUrl != nil && imageUrl == ""){
                     imageUrl = nil
                 }
-                let student = Meal(id: stId!,name: name!,imageUrl: imageUrl, type: type!, location: location!, cost: cost, comments: comments!, likes: likes, restaurant: restaurant!)
+                let student = Meal(id: stId!,name: name!,imageUrl: imageUrl, type: type!, location: location!, cost: cost, views: views, restaurant: restaurant!, rating: Int(rating))
                 meals.append(student)
             }
         }

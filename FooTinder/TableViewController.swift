@@ -88,9 +88,9 @@ class TableViewController: UITableViewController, UIPopoverPresentationControlle
         cell.name!.text = self.mealList[indexPath.row].name
         cell.restaurant!.text = self.mealList[indexPath.row].restaurant
         cell.cost!.text = String(self.mealList[indexPath.row].cost) + "$"
-        cell.likes!.text = String(self.mealList[indexPath.row].likes) + " likes"
-        cell.type!.text = self.mealList[indexPath.row].type
+        cell.likes!.text = String(Int32(self.mealList[indexPath.row].views)) + " views"
         cell.location!.text = self.mealList[indexPath.row].location
+        cell.ratingControl!.rating = self.mealList[indexPath.row].rating;
         if let imUrl = self.mealList[indexPath.row].imageUrl{
             Model.instance.getImage(urlStr: imUrl, callback: { (image) in
                 cell.meal_image!.image = image

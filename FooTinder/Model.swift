@@ -2,15 +2,15 @@
 //  Model.swift
 //  TestFb
 //
-//  Created by Eliav Menachi on 14/12/2016.
-//  Copyright © 2016 menachi. All rights reserved.
+//  Created by Omer Haimovich & Tom Acco on 30/02/2017.
+//  Copyright © 2017 omertom. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-let notifyStudentListUpdate = "com.menachi.NotifyStudentListUpdate"
-let notifyMealListUpdate = "com.menachi.NotifyMealListUpdate"
+
+let notifyMealListUpdate = "com.omertom.NotifyMealListUpdate"
 
 extension Date {
     
