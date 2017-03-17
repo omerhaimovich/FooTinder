@@ -11,13 +11,13 @@ import Foundation
 class Service{
     static func getLocations() -> [String]
     {
-        return ["TLV",
+        return ["Tel Aviv",
                 "Ramat Gan",
-                "Givaatim",
+                "Givataim",
                 "Petach Tikva",
                 "Ramat Hashron",
-                "Hafula",
-                "Hifa",
+                "Afula",
+                "Haifa",
                 "Nazenet"].sorted(by: {$0 < $1});
     }
     
@@ -38,12 +38,12 @@ class Service{
     static func getFoodTypes() -> [String]
     {
         return ["Italian",
-                "Chineese",
-                "MidEstern",
+                "Chinese",
+                "MidEastern",
                 "Mexican",
                 "Salads\\Sandwiches",
                 "Caffe",
                 "Sushi",
-                "Humuns"].sorted(by: {$0 < $1});
+                "Humus"].sorted(by: {$0 < $1});
     }
 }
