@@ -25,7 +25,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
 
     @IBOutlet weak var typeTextField: UITextField!
     
-    @IBAction func editImage(_ sender: UIButton) {
+    @IBAction func selectPhotoFromLibrary(_ sender: UITapGestureRecognizer) {
+        
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
@@ -41,9 +42,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
                 self.present(imagePicker, animated: true, completion: nil)
             }
         }
+        
+    
     }
     
-    var pickOption = ["one", "two", "three", "seven", "fifteen"]
+    //MARK: UIImagePickerControllerDelegate
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        // Dismiss the picker if the user canceled.
+        dismiss(animated: true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.spinner.isHidden = true;
@@ -155,6 +163,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         
         self.dismiss(animated: true, completion: nil);
     }
+    
+    
+    
+    
 }
 
 

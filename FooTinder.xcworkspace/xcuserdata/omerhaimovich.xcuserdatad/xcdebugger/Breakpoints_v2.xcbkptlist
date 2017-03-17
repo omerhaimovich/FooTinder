@@ -222,7 +222,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
             endingLineNumber = "37"
-            landmarkName = "pickerView(pickerView:didSelectRow:inComponent:)"
+            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -233,11 +233,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FooTinder/ViewController.swift"
-            timestampString = "511448486.448049"
+            timestampString = "511453725.047492"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -265,7 +265,7 @@
                   moduleName = "FooTinder"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omerhaimovich/Desktop/FooTinder/FooTinder/ViewController.swift"
-                  timestampString = "511447659.643044"
+                  timestampString = "511453461.209595"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -280,12 +280,12 @@
                   moduleName = "FooTinder"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omerhaimovich/Desktop/FooTinder/FooTinder/ViewController.swift"
-                  timestampString = "511447659.648937"
+                  timestampString = "511453461.217327"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
                   endingLineNumber = "14"
-                  offsetFromSymbolStart = "72">
+                  offsetFromSymbolStart = "70">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -295,7 +295,7 @@
                   moduleName = "FooTinder"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omerhaimovich/Desktop/FooTinder/FooTinder/ViewController.swift"
-                  timestampString = "511447659.661965"
+                  timestampString = "511453461.229893"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -310,7 +310,7 @@
                   moduleName = "FooTinder"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omerhaimovich/Desktop/FooTinder/FooTinder/ViewController.swift"
-                  timestampString = "511447659.668406"
+                  timestampString = "511453461.237424"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -318,6 +318,22 @@
                   offsetFromSymbolStart = "31">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FooTinder/ViewController.swift"
+            timestampString = "511453579.988149"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "selectPhotoFromLibrary(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
