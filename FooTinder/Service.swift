@@ -21,7 +21,21 @@ class Service{
                 "Nazenet"].sorted(by: {$0 < $1});
     }
     
-    static func geFoodTypes() -> [String]
+    static func getLocationWithNone() -> [String]
+    {
+        var locations = Service.getLocations()
+        locations.insert("None", at: 0)
+        return locations
+    }
+    
+    static func getFoodTypesWithNone() -> [String]
+    {
+        var types = Service.getFoodTypes()
+        types.insert("None", at: 0)
+        return types
+    }
+    
+    static func getFoodTypes() -> [String]
     {
         return ["Italian",
                 "Chineese",

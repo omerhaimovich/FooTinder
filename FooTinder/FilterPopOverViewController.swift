@@ -9,16 +9,18 @@
 import UIKit
 
 class FilterPopOverViewController: UIViewController,  UIPickerViewDataSource, UIPickerViewDelegate {
+    @IBOutlet weak var restaurantName: UITextField!
+    @IBOutlet weak var mealName: UITextField!
     
     @IBOutlet weak var TypeText: UITextField!
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch (pickerView.tag)
         {
             case (1):
-                self.locationText.text = Service.getLocations()[row]
+                self.locationText.text = Service.getLocationWithNone()[row]
                 break
             case (2):
-                TypeText.text = Service.geFoodTypes()[row]
+                TypeText.text = Service.getFoodTypesWithNone()[row]
                 break
             default:
                 break;
@@ -29,9 +31,9 @@ class FilterPopOverViewController: UIViewController,  UIPickerViewDataSource, UI
         switch (pickerView.tag)
         {
         case (1):
-            return Service.getLocations().count;
+            return Service.getLocationWithNone().count;
         case (2):
-            return Service.geFoodTypes().count;
+            return Service.getLocationWithNone().count;
         default:
             break;
         }
@@ -47,9 +49,9 @@ class FilterPopOverViewController: UIViewController,  UIPickerViewDataSource, UI
         switch (pickerView.tag)
         {
             case (1):
-                return Service.getLocations()[row];
+                return Service.getLocationWithNone()[row];
             case (2):
-                return Service.geFoodTypes()[row];
+                return Service.getFoodTypesWithNone()[row];
             default:
                 break;
         }
