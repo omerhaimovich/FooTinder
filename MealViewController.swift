@@ -21,7 +21,6 @@ class MealViewController: UIViewController {
     var meal: Meal?
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,7 +37,7 @@ class MealViewController: UIViewController {
             self.lblCost!.text = "$"  + String(meal.cost);
             self.lblRestaurant!.text = String(meal.restaurant);
             self.lblLocation!.text = meal.location;
-            self.type.text = meal.type
+            self.type.text = meal.type;
             
             
             if let imUrl = meal.imageUrl{
