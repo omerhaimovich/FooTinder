@@ -183,12 +183,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1597.1014492753625" y="747.554347826087"/>
+            <point key="canvasLocation" x="1607" y="1186"/>
         </scene>
-        <!--View Controller-->
+        <!--Meal View Controller-->
         <scene sceneID="Ndk-yo-cbT">
             <objects>
-                <viewController id="oZs-zM-dqg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MealController" id="oZs-zM-dqg" customClass="MealViewController" customModule="FooTinder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vGi-28-K9d"/>
                         <viewControllerLayoutGuide type="bottom" id="A6A-8E-MlP"/>
@@ -368,6 +368,7 @@
                                     <outlet property="name" destination="ov4-yq-Qdx" id="CES-G6-nDz"/>
                                     <outlet property="ratingControl" destination="R45-BO-WOq" id="COW-wc-SmV"/>
                                     <outlet property="restaurant" destination="FcM-bE-3hV" id="m8s-h5-jTg"/>
+                                    <segue destination="oZs-zM-dqg" kind="show" id="Xpk-ef-9l8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

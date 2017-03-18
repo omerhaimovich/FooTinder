@@ -31,6 +31,7 @@
 		F8F1D4411E7C2CE000D9DC63 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F1D4401E7C2CE000D9DC63 /* RatingControl.swift */; };
 		FA6209691E7BE51A003B9F7C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6209681E7BE51A003B9F7C /* Service.swift */; };
 		FA62096B1E7BF70B003B9F7C /* FilterPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62096A1E7BF70B003B9F7C /* FilterPopOverViewController.swift */; };
+		FA62096D1E7D18E2003B9F7C /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62096C1E7D18E2003B9F7C /* MealViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		F8F1D4401E7C2CE000D9DC63 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		FA6209681E7BE51A003B9F7C /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		FA62096A1E7BF70B003B9F7C /* FilterPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterPopOverViewController.swift; sourceTree = "<group>"; };
+		FA62096C1E7D18E2003B9F7C /* MealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealViewController.swift; path = ../MealViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		F8F1D3F51E7AC5F800D9DC63 /* FooTinder */ = {
 			isa = PBXGroup;
 			children = (
+				FA62096C1E7D18E2003B9F7C /* MealViewController.swift */,
 				F8F1D43C1E7B1A0500D9DC63 /* Images */,
 				F8F1D4261E7AD78C00D9DC63 /* Models */,
 				F8F1D3F61E7AC5F800D9DC63 /* AppDelegate.swift */,
@@ -511,6 +514,7 @@
 				F8F1D43F1E7C0AFC00D9DC63 /* LocationDataSourceDelegate.swift in Sources */,
 				F8F1D42A1E7AD84000D9DC63 /* MealTableViewCell.swift in Sources */,
 				F8F1D4391E7AD87900D9DC63 /* ModelSql.swift in Sources */,
+				FA62096D1E7D18E2003B9F7C /* MealViewController.swift in Sources */,
 				FA6209691E7BE51A003B9F7C /* Service.swift in Sources */,
 				F8F1D4381E7AD87900D9DC63 /* ModelFirebase.swift in Sources */,
 				F8F1D42B1E7AD84000D9DC63 /* TableViewController.swift in Sources */,

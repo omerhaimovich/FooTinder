@@ -21,6 +21,7 @@ class Meal{
     var rating:Int
     var lastUpdate:Date?
     
+    
     init(id:String, name:String, imageUrl:String? = nil, type:String, location:String, cost:Double,  views:Double = 0, restaurant:String, rating: Int){
         self.id = id
         self.name = name
