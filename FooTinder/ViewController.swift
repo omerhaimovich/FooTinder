@@ -141,15 +141,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         self.spinner.isHidden = false;
         self.spinner.startAnimating();
         
-        if self.nameTf!.text != nil
+        if (self.nameTf!.text != nil && self.nameTf!.text != "")
         {
-            if self.restaurant!.text != nil
+            if (self.restaurant!.text != nil && self.restaurant!.text != "")
             {
-                if self.typeTextField!.text != nil
+                if (self.typeTextField!.text != nil && self.typeTextField!.text != "")
                 {
-                    if self.locationTextField!.text != nil
+                    if (self.locationTextField!.text != nil && self.locationTextField!.text != "")
                     {
-                        if self.CostTF!.text != nil
+                        if (self.CostTF!.text != nil && self.CostTF!.text != "")
                         {
                             if let image = self.selectedImage{
                                 
@@ -211,6 +211,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         
         self.present(alertController, animated: true, completion: nil)
 
+        self.spinner.stopAnimating()
+        self.spinner.isHidden = true;
+
+        
     }
     
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
