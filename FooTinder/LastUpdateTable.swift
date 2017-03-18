@@ -1,9 +1,9 @@
 //
 //  LastUpdateTable.swift
-//  TestFb
+//  FooTinder
 //
-//  Created by Eliav Menachi on 28/12/2016.
-//  Copyright © 2016 menachi. All rights reserved.
+//  Created by Omer Haimovich on 3/16/2017.
+//  Copyright © 2017 Omer Haimovich. All rights reserved.
 //
 
 import Foundation
@@ -15,6 +15,7 @@ class LastUpdateTable{
     static let DATE = "DATE"
     
     
+    // Create last update table
     static func createTable(database:OpaquePointer?)->Bool{
         var errormsg: UnsafeMutablePointer<Int8>? = nil
         
@@ -29,6 +30,7 @@ class LastUpdateTable{
         return true
     }
     
+    // Setting last update
     static func setLastUpdate(database:OpaquePointer?, table:String, lastUpdate:Date){
         var sqlite3_stmt: OpaquePointer? = nil
         if (sqlite3_prepare_v2(database,"INSERT OR REPLACE INTO "
@@ -48,6 +50,7 @@ class LastUpdateTable{
         sqlite3_finalize(sqlite3_stmt)
     }
     
+    // Get Last Update
     static func getLastUpdateDate(database:OpaquePointer?, table:String)->Date?{
         var uDate:Date?
         var sqlite3_stmt: OpaquePointer? = nil

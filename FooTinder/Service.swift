@@ -3,11 +3,12 @@
 //  FooTinder
 //
 //  Created by Tom Acco on 3/17/17.
-//  Copyright © 2017 Omer Haimovich. All rights reserved.
+//  Copyright © 2017 Tom Acco. All rights reserved.
 //
 
 import Foundation
 
+// Service for getting locations and food Types
 class Service{
     static var location_filter = ""
     static var meal_name_filter = ""

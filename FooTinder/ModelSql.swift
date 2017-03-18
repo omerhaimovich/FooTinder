@@ -1,9 +1,9 @@
 //
 //  ModelSql.swift
-//  TestFb
+//  FooTinder
 //
-//  Created by Eliav Menachi on 21/12/2016.
-//  Copyright © 2016 menachi. All rights reserved.
+//  Created by Omer Haimovich on 3/17/2017.
+//  Copyright © 2017 Omer Haimovich. All rights reserved.
 //
 
 import Foundation

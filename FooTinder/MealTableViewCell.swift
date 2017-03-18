@@ -1,9 +1,9 @@
 //
 //  StudentTableViewCell.swift
-//  TestFb
+//  FooTinder
 //
-//  Created by Eliav Menachi on 04/01/2017.
-//  Copyright © 2017 menachi. All rights reserved.
+//  Created by Omer Haimovich on 16/3/2017.
+//  Copyright © 2017 Omer Haimovich. All rights reserved.
 //
 
 import UIKit

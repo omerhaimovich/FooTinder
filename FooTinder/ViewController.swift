@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  FooTinder
 //
-//  Created by Omer Haimovich on 17/03/2017.
-//  Copyright © 2017 omertom. All rights reserved.
+//  Created by Omer Haimovich on 3/17/2017.
+//  Copyright © 2017 Omer Haimovich. All rights reserved.
 //
 
 import UIKit
@@ -117,7 +117,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func onTap(_ sender: UITapGestureRecognizer) {
+   
+    @IBAction func choosePhoto(_ sender: UITapGestureRecognizer) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
@@ -135,7 +136,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         }
 
     }
-    
+
     @IBAction func save(_ sender: UIButton) {
         self.spinner.isHidden = false;
         self.spinner.startAnimating();

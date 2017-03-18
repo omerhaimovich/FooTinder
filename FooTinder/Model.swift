@@ -1,9 +1,9 @@
 //
 //  Model.swift
-//  TestFb
+//  FooTinder
 //
-//  Created by Omer Haimovich & Tom Acco on 30/02/2017.
-//  Copyright © 2017 omertom. All rights reserved.
+//  Created by Omer Haimovich on 2/29/2017.
+//  Copyright © 2017 Omer Haimovich. All rights reserved.
 //
 
 import Foundation

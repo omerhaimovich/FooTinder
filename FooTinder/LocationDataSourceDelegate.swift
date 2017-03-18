@@ -2,7 +2,7 @@
 //  LocationDataSourceDelegate.swift
 //  FooTinder
 //
-//  Created by Omer Haimovich on 17/03/2017.
+//  Created by Omer Haimovich on 3/17/2017.
 //  Copyright © 2017 Omer Haimovich. All rights reserved.
 //
 

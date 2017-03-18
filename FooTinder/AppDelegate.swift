@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  TestFb
+//  FooTinder
 //
-//  Created by Eliav Menachi on 14/12/2016.
-//  Copyright © 2016 menachi. All rights reserved.
+//  Created by Omer Haimovich on 3/16/2017.
+//  Copyright © 2017 Omer Haimovich. All rights reserved.
 //
 
 import UIKit

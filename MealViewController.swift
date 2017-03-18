@@ -10,19 +10,42 @@ import UIKit
 
 class MealViewController: UIViewController {
     
+    // View Labels
+    @IBOutlet weak var lblMealName: UILabel!
+    @IBOutlet weak var imgMealImage: UIImageView!
+    @IBOutlet weak var ctrlRatingControl: RatingControl!
+    @IBOutlet weak var lblCost: UILabel!
+    @IBOutlet weak var lblLocation: UILabel!
+    @IBOutlet weak var lblRestaurant: UILabel!
     var meal: Meal?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let meal = meal {
          
-           var show_meal = Meal(id: meal.id, name: meal.name, imageUrl: meal.imageUrl, type: meal.type, location: meal.location, cost: meal.cost, views: meal.views + 1, restaurant: meal.restaurant, rating: meal.rating)
+            // update view in database.
+           let show_meal = Meal(id: meal.id, name: meal.name, imageUrl: meal.imageUrl, type: meal.type, location: meal.location, cost: meal.cost, views: meal.views + 1, restaurant: meal.restaurant, rating: meal.rating)
             
-            Model.instance.addMeal(meal: show_meal)
+            Model.instance.addMeal(meal: show_meal);
+            
+            // set view properties
+            self.lblMealName!.text = meal.name;
+            self.ctrlRatingControl.rating = meal.rating;
+            self.lblCost!.text = String(meal.cost);
+            self.lblRestaurant!.text = String(meal.restaurant);
+            self.lblLocation!.text = meal.location;
+            
+            if let imUrl = meal.imageUrl{
+                Model.instance.getImage(urlStr: imUrl, callback: { (image) in
+                    self.imgMealImage!.image = image
+                })
+            }
+            
         }
-        
-        //Model.instance.addMeal(meal: show_meal)
-        // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {

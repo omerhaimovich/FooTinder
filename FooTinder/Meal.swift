@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseDatabase
 
+// Represents a Meal
 class Meal{
     var id:String
     var name:String
