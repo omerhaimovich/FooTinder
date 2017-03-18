@@ -84,7 +84,7 @@ class TableViewController: UITableViewController, UIPopoverPresentationControlle
         let cell = tableView.dequeueReusableCell(withIdentifier: "MealTableViewCell", for: indexPath) as! MealTableViewCell
         cell.name!.text = self.mealList[indexPath.row].name
         cell.restaurant!.text = self.mealList[indexPath.row].restaurant
-        cell.cost!.text = String(self.mealList[indexPath.row].cost) + "$"
+        cell.cost!.text = "$" + String(self.mealList[indexPath.row].cost)
         cell.likes!.text = String(Int32(self.mealList[indexPath.row].views)) + " views"
         cell.location!.text = self.mealList[indexPath.row].location
         cell.ratingControl!.rating = self.mealList[indexPath.row].rating;

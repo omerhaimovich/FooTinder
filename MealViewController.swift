@@ -17,6 +17,7 @@ class MealViewController: UIViewController {
     @IBOutlet weak var lblCost: UILabel!
     @IBOutlet weak var lblLocation: UILabel!
     @IBOutlet weak var lblRestaurant: UILabel!
+    @IBOutlet weak var type: UILabel!
     var meal: Meal?
     
     
@@ -34,9 +35,11 @@ class MealViewController: UIViewController {
             // set view properties
             self.lblMealName!.text = meal.name;
             self.ctrlRatingControl.rating = meal.rating;
-            self.lblCost!.text = String(meal.cost);
+            self.lblCost!.text = "$"  + String(meal.cost);
             self.lblRestaurant!.text = String(meal.restaurant);
             self.lblLocation!.text = meal.location;
+            self.type.text = meal.type
+            
             
             if let imUrl = meal.imageUrl{
                 Model.instance.getImage(urlStr: imUrl, callback: { (image) in
