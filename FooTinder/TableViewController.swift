@@ -143,6 +143,8 @@ class TableViewController: UITableViewController, UIPopoverPresentationControlle
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
+        if (segue.identifier == "mealDetails")
+        {
         guard let mealDetailViewController = segue.destination as? MealViewController else {
             fatalError("Unexpected destination: \(segue.destination)")
         }
@@ -157,6 +159,7 @@ class TableViewController: UITableViewController, UIPopoverPresentationControlle
         
         let selectedMeal = mealList[indexPath.row]
         mealDetailViewController.meal = selectedMeal
+        }
      }
  
     

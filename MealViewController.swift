@@ -15,8 +15,13 @@ class MealViewController: UIViewController {
         super.viewDidLoad()
 
         if let meal = meal {
+         
+           var show_meal = Meal(id: meal.id, name: meal.name, imageUrl: meal.imageUrl, type: meal.type, location: meal.location, cost: meal.cost, views: meal.views + 1, restaurant: meal.restaurant, rating: meal.rating)
             
+            Model.instance.addMeal(meal: show_meal)
         }
+        
+        //Model.instance.addMeal(meal: show_meal)
         // Do any additional setup after loading the view.
     }
 
