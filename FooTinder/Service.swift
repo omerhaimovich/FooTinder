@@ -13,6 +13,7 @@ class Service{
     static var meal_name_filter = ""
     static var restaurant_filter = ""
     static var type_filter = ""
+    static var max_cost_filter = 9999.0
     
     static func getLocations() -> [String]
     {
@@ -26,12 +27,13 @@ class Service{
                 "Nazenet"].sorted(by: {$0 < $1});
     }
     
-    static func setFilters(location :String, meal_name :String, restaurant: String, type: String)
+    static func setFilters(location :String, meal_name :String, restaurant: String, type: String, max_cost :Double)
     {
         Service.location_filter = location
         Service.meal_name_filter = meal_name
         Service.restaurant_filter = restaurant
         Service.type_filter = type
+        Service.max_cost_filter = max_cost
     }
     
     static func getLocationWithNone() -> [String]

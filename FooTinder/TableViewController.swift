@@ -56,6 +56,7 @@ class TableViewController: UITableViewController, UIPopoverPresentationControlle
             (Service.meal_name_filter.isEmpty || ($0.name.lowercased().contains(Service.meal_name_filter.lowercased()))) &&
             (Service.restaurant_filter.isEmpty || ($0.restaurant.lowercased().contains(Service.restaurant_filter.lowercased()))) &&
             (Service.type_filter.isEmpty || ($0.type.lowercased().contains(Service.type_filter.lowercased()))) &&
+            ($0.cost <= Service.max_cost_filter) &&
             (Service.location_filter.isEmpty || ($0.location.lowercased().contains(Service.location_filter.lowercased())))
         }
         
@@ -65,7 +66,7 @@ class TableViewController: UITableViewController, UIPopoverPresentationControlle
     
     func sort()
     {
-        self.mealList = self.mealList.sorted(by: { $0.lastUpdate == nil || ($0.lastUpdate! > $1.lastUpdate!)});
+        self.mealList = self.mealList.sorted(by: { (($0.lastUpdate! == $1.lastUpdate!) ? ($0.views > $1.views) : ($0.lastUpdate! > $1.lastUpdate!)) });
     }
     
     override func didReceiveMemoryWarning() {

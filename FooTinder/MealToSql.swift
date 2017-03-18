@@ -71,6 +71,7 @@ extension Meal{
             if self.imageUrl != nil {
                 imageUrl = self.imageUrl!.cString(using: .utf8)
             }
+            var lastUpdate = self.lastUpdate
             
             sqlite3_bind_text(sqlite3_stmt, 1, id,-1,nil);
             sqlite3_bind_text(sqlite3_stmt, 2, name,-1,nil);
@@ -84,7 +85,7 @@ extension Meal{
             if (lastUpdate == nil){
                 lastUpdate = Date()
             }
-            sqlite3_bind_double(sqlite3_stmt, 9, lastUpdate!.toFirebase());
+            sqlite3_bind_double(sqlite3_stmt, 10, lastUpdate!.toFirebase());
             
             if(sqlite3_step(sqlite3_stmt) == SQLITE_DONE){
                 print("new row added succefully")
@@ -107,13 +108,15 @@ extension Meal{
                 let views = Double(sqlite3_column_double(sqlite3_stmt,6))
                 let cost = Double(sqlite3_column_double(sqlite3_stmt,7))
                 let rating = Int(sqlite3_column_int(sqlite3_stmt,8))
-                //let update =  Double(sqlite3_column_double(sqlite3_stmt,3))
+                let update =  Double(sqlite3_column_double(sqlite3_stmt,9))
                 print("read from filter st: \(stId) \(name) \(imageUrl)")
                 if (imageUrl != nil && imageUrl == ""){
                     imageUrl = nil
                 }
-                let student = Meal(id: stId!,name: name!,imageUrl: imageUrl, type: type!, location: location!, cost: cost, views: views, restaurant: restaurant!, rating: Int(rating))
-                meals.append(student)
+                let meal = Meal(id: stId!,name: name!,imageUrl: imageUrl, type: type!, location: location!, cost: cost, views: views, restaurant: restaurant!, rating: Int(rating))
+                meal.lastUpdate = Date.fromFirebase(update)
+                meals.append(meal)
+                
             }
         }
         sqlite3_finalize(sqlite3_stmt)
