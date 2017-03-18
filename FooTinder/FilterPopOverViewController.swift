@@ -24,7 +24,7 @@ class FilterPopOverViewController: UIViewController,  UIPickerViewDataSource, UI
     @IBOutlet weak var restaurant_name: UITextField!
     @IBAction func filter(_ sender: Any) {
         var max_cost = 9999.0
-        if (maxCost.text != nil)
+        if (maxCost.text != "")
         {
             max_cost = Double(maxCost.text!)!
         }
